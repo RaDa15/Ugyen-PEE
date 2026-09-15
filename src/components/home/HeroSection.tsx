@@ -99,6 +99,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <img
               src={slide.image}
               alt={slide.title1}
+              loading={idx === 0 ? "eager" : "lazy"}
+              decoding="async"
               className="w-full h-full object-cover object-center"
             />
           </div>
