@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --up-purple: #6B5575;
+  --up-purple-dark: #3F304A;
+  --up-purple-deep: #251B2E;
+  --up-purple-light: #EDE8F0;
+  --up-purple-subtle: #F4F1F6;
+
+  --up-teal: #176B73;
+  --up-teal-light: #E7F2F2;
+
+  --up-gold: #D5A928;
+  --up-red: #C65B4B;
+  --up-green: #5E8B58;
+
+  --up-white: #FFFFFF;
+  --up-background: #F8F7F9;
+
+  --up-text: #202024;
+  --up-text-muted: #66636A;
+
+  --up-border: #E4DFE7;
+}
+
+/* Diagonal stripes pattern matching mockup hero & card headers */
+.bg-diagonal-stripes {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.035),
+    rgba(255, 255, 255, 0.035) 10px,
+    rgba(0, 0, 0, 0.04) 10px,
+    rgba(0, 0, 0, 0.04) 20px
+  );
+}
+
+.bg-hero-texture {
+  background: radial-gradient(circle at 85% 20%, rgba(107, 85, 117, 0.45) 0%, transparent 50%),
+              radial-gradient(circle at 10% 80%, rgba(23, 107, 115, 0.25) 0%, transparent 40%),
+              linear-gradient(135deg, #372A42 0%, #2A1D33 50%, #201529 100%);
+}
+
+.bg-card-stripes {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(107, 85, 117, 0.06),
+    rgba(107, 85, 117, 0.06) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F7F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4B9CC;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6B5575;
+}
+
+/* 3D perspective wrapper for Coverflow Carousel */
+.perspective-container {
+  perspective: 1000px;
+}
+
+/* Continuous Infinite Ticker Tape */
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
