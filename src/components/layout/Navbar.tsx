@@ -91,7 +91,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentRoute, onNavigate, onOpen
           >
             <div className="relative w-12 h-12 flex-shrink-0">
               <img
-                src="/ugyenpee-logo.jpg"
+                src="./ugyenpee-logo.jpg"
                 alt="Ugyen Pee Logo"
                 className="w-full h-full object-cover rounded-full shadow-sm ring-1 ring-slate-100 transition-transform duration-300 group-hover:scale-105"
               />

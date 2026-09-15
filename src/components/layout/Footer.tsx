@@ -16,7 +16,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConsultation }
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-white rounded-full p-0.5 shadow-md flex-shrink-0 overflow-hidden ring-1 ring-white/20">
-                <img src="/ugyenpee-logo.jpg" alt="Ugyen Pee Official Seal" className="w-full h-full object-cover rounded-full" />
+                <img src="./ugyenpee-logo.jpg" alt="Ugyen Pee Official Seal" className="w-full h-full object-cover rounded-full" />
               </div>
               <div>
                 <span className="block font-serif text-2xl font-semibold text-white">Ugyen Pee</span>

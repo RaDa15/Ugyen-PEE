@@ -133,7 +133,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
         <div className="bg-up-purple-dark text-white px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center p-0.5 overflow-hidden shadow-sm">
-              <img src="/ugyenpee-logo.jpg" alt="Ugyen Pee Official Seal" className="w-full h-full object-cover rounded-full" />
+              <img src="./ugyenpee-logo.jpg" alt="Ugyen Pee Official Seal" className="w-full h-full object-cover rounded-full" />
             </div>
             <div>
               <h3 className="font-serif text-xl font-semibold leading-tight">Book a Consultation</h3>

@@ -73,7 +73,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenConsultation, onNavi
           <div className="bg-up-purple-light/40 rounded-2xl p-8 border border-up-border relative overflow-hidden shadow-card">
             <div className="absolute top-0 right-0 w-48 h-48 bg-card-stripes opacity-40 pointer-events-none" />
             <div className="w-16 h-16 rounded-full bg-white shadow-md p-1 mb-6 flex items-center justify-center overflow-hidden ring-2 ring-up-purple/10">
-              <img src="/ugyenpee-logo.jpg" alt="Ugyen Pee Official Seal" className="w-full h-full object-cover rounded-full" />
+              <img src="./ugyenpee-logo.jpg" alt="Ugyen Pee Official Seal" className="w-full h-full object-cover rounded-full" />
             </div>
             <h3 className="font-serif text-2xl font-bold text-up-purple-dark mb-4">
               Ethical Principles & Regulatory Commitment
