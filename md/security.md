@@ -119,3 +119,26 @@ Some protections become relevant only in later phases and shouldn't be over-buil
 - Payment security / PCI concerns — relevant only if online payments are ever added (currently explicit non-goal)
 
 Revisit this document when those phases are scoped, rather than designing controls for features that don't exist yet.
+
+---
+
+## 12. Pre-Launch Hardening Implemented (Audit Follow-up)
+
+### Client & Head Security:
+- Added `<meta http-equiv="Content-Security-Policy">` restricting scripts (`'self' 'unsafe-inline'`), styles (`'self' 'unsafe-inline' https://fonts.googleapis.com`), fonts (`https://fonts.gstatic.com`), and images (`https://images.unsplash.com`).
+- Added `<meta name="referrer" content="strict-origin-when-cross-origin">`.
+- Added `<meta http-equiv="X-Content-Type-Options" content="nosniff">`.
+- Implemented JS framebuster in `index.html` preventing third-party iframe embedding / clickjacking.
+- Added `robots.txt` and `sitemap.xml` in `public/`.
+
+### External Pre-Launch Tasks Required by Domain & Account Owners:
+1. **Email Domain Spoofing Defense (`@ugyenpee.bt`):**
+   - Configure SPF: `v=spf1 include:_spf.yourmailprovider.com ~all`
+   - Generate and sign outbound mail with DKIM.
+   - Configure DMARC TXT record: `_dmarc.ugyenpee.bt` -> `v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@ugyenpee.bt;`
+2. **GitHub Deployment Account (`RaDa15`):**
+   - Enforce hardware/app-based 2FA on the account.
+   - Maintain branch protection on `main` to prevent unreviewed force pushes.
+3. **Future Backend Form Integration:**
+   - When switching from simulated `console.log` submission to a live API (Formspree/Resend/Cloudflare Workers), enforce server-side field length checks, email regex, honeypot rejection, and IP-based rate limiting on the receiving endpoint.
+
